@@ -12,7 +12,7 @@ create table takes
      discipline_id varchar(6),
      semester varchar(3),  
      year numeric(4),
-     grade float(2,1),
+     grade numeric(2,1),
      primary key (student_id, discipline_id, semester, year),
      foreign key (student_id) references student (id) on delete cascade,
      foreign key (discipline_id) references discipline (id) on delete cascade
@@ -21,7 +21,7 @@ create table takes
 create table discipline 
     (id varchar(6),
      name varchar(25),
-     hours integer(3),
+     hours numeric(3),
      class_id varchar(4),
      departament_name varchar(20),
      primary key (id),
@@ -82,6 +82,6 @@ create table graduated
      semester varchar(3),
      primary key (student_id),
      foreign key (student_id) references student (id) on delete cascade,
-     foreign key (course_id) references course (id) on delete set null,
+     foreign key (course_id) references course (id) on delete set null
     );
   
