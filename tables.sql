@@ -4,7 +4,8 @@ create table student
      course_id varchar(5),
      tcc_id varchar(7),
      primary key (id),
-     foreign key (tcc_id) references tcc_group (id) on delete set null
+     foreign key (tcc_id) references tcc_group (id) on delete set null,
+     foreign key (course_id) references course (id) on delete set null,
     );
 
 create table takes 
