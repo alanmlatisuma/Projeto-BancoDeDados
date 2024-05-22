@@ -1,6 +1,6 @@
 
 -- HISTORICO ESCOLAR DE QUALQUER ALUNO
-SELECT s.name AS 'student', d.id AS 'discipline id', d.name AS 'discipline', t.semester, t.year, t.grade
+SELECT s.name AS "student", d.id AS "discipline id", d.name AS "discipline", t.semester, t.year, t.grade
 FROM takes t
 LEFT JOIN student s
 ON s.id = t.student_id
